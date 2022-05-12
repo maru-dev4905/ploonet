@@ -1,0 +1,24 @@
+/* header */
+main header{
+    height: 60px;
+    background-color: #f8f8f8;
+}
+main header .project__add__btn{
+    border-radius: 5px;
+    background-color: #2D7BF0;
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 13px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s ease;
+}
+main header .project__add__btn:hover{
+    opacity: 0.7;
+}
+/* header end */

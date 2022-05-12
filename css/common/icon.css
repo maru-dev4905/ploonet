@@ -1,0 +1,211 @@
+[class*="__icon"]{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.gnb__home__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-home-white.svg");
+}
+
+.gnb__project__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-project-white.svg");
+}
+
+.gnb__metahuman__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-metahuman-white.svg");
+}
+
+.profile__cash__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-coin-gold.svg");
+}
+
+.membership__thunderbolt__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-thunderbolt-white.svg");
+}
+
+.project__plus__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-plus-white.svg");
+}
+
+.style__metahuman__icon{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../images/icons/studio-side/ico-metahuman-gray.svg");
+    background-size: 28px 28px;
+}
+.style__tab button.active .style__metahuman__icon{
+    background-image: url("../../images/icons/studio-side/ico-metahuman-blue.svg");
+}
+
+.style__background__icon{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../images/icons/studio-side/ico-background-gray.svg");
+    background-size: 28px 28px;
+}
+.style__tab button.active .style__background__icon{
+    background-image: url("../../images/icons/studio-side/ico-background-blue.svg");
+}
+
+.style__deco__icon{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../images/icons/studio-side/ico-deco-gray.svg");
+    background-size: 28px 28px;
+}
+.style__tab button.active .style__deco__icon{
+    background-image: url("../../images/icons/studio-side/ico-deco-blue.svg");
+}
+
+.style__text__icon{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../images/icons/studio-side/ico-text-gray.svg");
+    background-size: 28px 28px;
+}
+.style__tab button.active .style__text__icon{
+    background-image: url("../../images/icons/studio-side/ico-text-blue.svg");
+}
+
+.style__transition__icon{
+    width: 28px;
+    height: 28px;
+    background-image: url("../../images/icons/studio-side/ico-transition-gray.svg");
+    background-size: 28px 28px;
+}
+.style__tab button.active .style__transition__icon{
+    background-image: url("../../images/icons/studio-side/ico-transition-blue.svg");
+}
+
+.studio__backArrow__icon{
+    width: 11px;
+    height: 11px;
+    background-image: url("../../images/icons/common/ico-backArrow-black.svg");
+}
+
+.studio__pencil__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-pencil-gray.svg");
+}
+
+.studio__save__icon{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/icons/common/ico-save-black.svg");
+}
+
+.timeline__prev__icon{
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/studio-timeline/prev-arrow-black.svg");
+}
+
+.timeline__next__icon{
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/studio-timeline/next-arrow-black.svg");
+}
+
+.timeline__cut__icon{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/icons/studio-timeline/cut-black.svg");
+}
+
+.timeline__trash__icon{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/icons/studio-timeline/trash-black.svg");
+}
+
+.timeline__copy__icon{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/icons/studio-timeline/copy-black.svg");
+}
+
+.timeline__zoomOut__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/zoomOut-black.svg");
+}
+
+.timeline__zoomIn__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/zoomIn-black.svg");
+}
+
+.timeline__fullScreen__icon{
+    width: 17.5px;
+    height: 12.5px;
+    background-image: url("../../images/icons/studio-timeline/fullScreen-black.svg");
+}
+
+.timeline__metahuman__icon{
+    width: 15px;
+    height: 13.4px;
+    background-image: url("../../images/icons/studio-timeline/metahuman-black.svg");
+}
+
+.timeline__text__icon{
+    width: 15px;
+    height: 15px;
+    background-image: url("../../images/icons/studio-timeline/text-black.svg");
+}
+
+.timeline__img__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/img-black.svg");
+}
+
+.timeline__soundEffect__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/soundEffect-black.svg");
+}
+
+.timeline__backgroundImg__icon{
+    width: 15px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/backgroundImg-black.svg");
+}
+
+.timeline__backgroundImg__icon{
+    width: 15px;
+    height: 14px;
+    background-image: url("../../images/icons/studio-timeline/backgroundImg-black.svg");
+}
+
+.timeline__backgroundVideo__icon{
+    width: 18px;
+    height: 16px;
+    background-image: url("../../images/icons/studio-timeline/backgroundVideo-black.svg");
+}
+
+.timeline__backgroundMusic__icon{
+    width: 12px;
+    height: 12px;
+    background-image: url("../../images/icons/studio-timeline/backgroundMusic-black.svg");
+}
+
+.close__gray__icon{
+    background-image: url("../../images/icons/studio-side/ico-close-gray.svg");
+    background-size: 9px 9px;
+}

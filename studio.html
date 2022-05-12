@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploonet</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common/font.css">
+    <link rel="stylesheet" href="./css/common/reset.css">
+    <link rel="stylesheet" href="./css/common/icon.css">
+    <link rel="stylesheet" href="./css/common/layout.css">
+
+    <link rel="stylesheet" href="./css/components/side.css">
+    <link rel="stylesheet" href="./css/components/card.css">
+
+    <link rel="stylesheet" href="./css/pages/studio.css">
+</head>
+<body>
+
+    <div class="studio__wrap">
+        <aside class="side">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/common/logo2.svg" alt="logo">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <!-- 해당 페이지일 경우 current 클래스 추가 -->
+                        <a href="#" class="current">
+                            <i class="gnb__home__icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__project__icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__metahuman__icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="profile">
+                    <div 
+                        class="profile__img"
+                        style="background-image: url(./images/profile/test-profile.png);"    
+                    ></div>
+                    <div class="profile__desc">
+                        <!-- <p class="name"></p> -->
+                        <!-- <div class="cash">
+                            <i class="profile__cash__icon"></i>
+                            <span class="number">0</span>
+                        </div> -->
+                    </div>
+                </div>
+                <button class="membership__upgrade__btn">
+                    <!-- <p>멤버십 업그레이드</p> -->
+                    <i class="membership__thunderbolt__icon"></i>
+                </button>
+            </div>
+        </aside>
+        
+        <main class="flex">
+            <article class="page__list">
+                <div class="title">
+                    <h2>Pages</h2>
+    
+                    <!-- 
+                        page total number data에 넣어주세요 
+                        css로 숫자 변화하게 만들어놨습니다.
+                    -->
+                    <span class="total" data-totalNumber="01">
+                        total
+                    </span>
+                </div>
+                <ul class="list">
+                    <li>
+                        <div class="card">
+                            <button class="add__btn"></button>
+                        </div>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article>
+            <div class="studio__main">
+                <div class="studio__header">
+                    <div class="col flex alignCenter">
+                        <a 
+                            href="#"
+                            class="studio__backArrow__icon"
+                        ></a>
+                        <div class="title ">
+                            <h2>Untitled</h2>
+                            <input type="text" class="studio__title__input width-dynamic proba dva" />
+                            <button class="studio__pencil__icon"></button>
+                        </div>
+                    </div>
+                    <div class="col flex alignCenter">
+                        <button class="save__btn studio__save__icon"></button>
+                        <button class="preview__btn">
+                            <p>미리보기</p>
+                            <span>2</span>
+                        </button>
+                        <button class="export__btn">
+                            <p>내보내기</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="studio__canvas">
+                    <!-- 
+                        해당 사이즈 캔버스 넣어주시면 됩니다. 
+                        사이즈는 다 맞춰놨습니다.
+                    -->
+
+                    <!-- default -->
+                    <div class="canvas1 "></div>
+    
+                    <!-- 1:1 -->
+                    <!-- <div class="canvas2 "></div> -->
+                    
+                    <!-- 9:16 -->
+                    <!-- <div class="canvas3 "></div> -->
+                    
+                    <!-- 4:3 -->
+                    <!-- <div class="canvas4 "></div> -->
+                </div>
+                <div class="studio__tool">
+                    <div class="col flex alignCenter">
+                        <button class="prev__btn    timeline__prev__icon"></button>
+                        <button class="next__btn    timeline__next__icon"></button>
+                        <button class="cut__btn     timeline__cut__icon"></button>
+                        <button class="trash__btn   timeline__trash__icon"></button>
+                        <button class="copy__btn    timeline__copy__icon"></button>
+                    </div>
+                    <div class="col flex alignCenter">
+                        <div class="scale__box">
+                            <button class="zoomOut__btn     timeline__zoomOut__icon"></button>
+                            <input type="range" >
+                            <button class="zoomIn__btn      timeline__zoomIn__icon"></button>
+                        </div>
+                        <button class="fullScreen__btn      timeline__fullScreen__icon"></button>
+                    </div>
+                </div>
+                <div class="studio__timeline">
+                    <div class="time__box">
+                        <div class="time">
+                            <span>00:00:00:00</span>
+                        </div>
+                        <div class="time__progress">
+                            <span>
+                                <em>0</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:05</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:10</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:15</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:20</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:25</em>
+                            </span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <em>0:30</em>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content__box">
+                        <ul class="title__line">
+                            <li>
+                                <i class="timeline__metahuman__icon"></i>
+                                <span>메타휴먼</span>
+                            </li>
+                            <li>
+                                <i class="timeline__text__icon"></i>
+                                <span>텍스트</span>
+                            </li>
+                            <li>
+                                <i class="timeline__img__icon"></i>
+                                <span>이미지</span>
+                            </li>
+                            <li>
+                                <i class="timeline__soundEffect__icon"></i>
+                                <span>효과음</span>
+                            </li>
+                            <li>
+                                <i class="timeline__backgroundImg__icon"></i>
+                                <span>배경사진</span>
+                            </li>
+                            <li>
+                                <i class="timeline__backgroundVideo__icon"></i>
+                                <span>배경영상</span>
+                            </li>
+                            <li>
+                                <i class="timeline__backgroundMusic__icon"></i>
+                                <span>배경음악</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="style__tab">
+            <ul>
+                <li>
+                    <button class="active" data-styleTab="metahuman">
+                        <i class="style__metahuman__icon"></i>
+                        <span>메타휴먼</span>
+                    </button>
+                    <div class="metahuman">
+                        <div class="title">
+                            <h2>메타휴먼</h2>
+                            <button class="close__btn close__gray__icon"></button>
+                        </div>
+                        <div class="content">
+                            <div class="col">
+                                <div class="select">
+                                    <button class="select__open">
+                                        <span class="default">메타 휴먼 선택</span>
+                                        <i class="select__black__icon"></i>
+                                    </button>
+                                    <ul class="select__list">
+                                        <li>
+                                            <button class="select__btn">
+                                                <div class="img__wrap">
+                                                    <img src="./images/metahuman/01.png" alt="메타휴먼-김계성">
+                                                </div>
+                                                <h3>김계성</h3>
+                                                <div class="tag__list">
+                                                    <span class="blue__fill__tag">Free</span>
+                                                    <span class="blue__strok__tag">Real</span>
+                                                </div>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <button data-styleTab="background">
+                        <i class="style__background__icon"></i>
+                        <span>배경</span>
+                    </button>
+                </li>
+                <li>
+                    <button data-styleTab="deco">
+                        <i class="style__deco__icon"></i>
+                        <span>꾸미기</span>
+                    </button>
+                </li>
+                <li>
+                    <button data-styleTab="text">
+                        <i class="style__text__icon"></i>
+                        <span>텍스트</span>
+                    </button>
+                </li>
+                <li>
+                    <button data-styleTab="transition`">
+                        <i class="style__transition__icon"></i>
+                        <span>전환</span>
+                    </button>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+
+    <script src="./js/studio_tab.js"></script>
+    <script src="./js/studio_title.js"></script>
+    <script src="./js/studio_range.js"></script>
+</body>
+</html>

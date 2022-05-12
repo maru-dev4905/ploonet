@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploonet</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common/font.css">
+    <link rel="stylesheet" href="./css/common/reset.css">
+    <link rel="stylesheet" href="./css/common/icon.css">
+    <link rel="stylesheet" href="./css/common/layout.css">
+
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/side.css">
+    <link rel="stylesheet" href="./css/components/card.css">
+
+    <link rel="stylesheet" href="./css/pages/home.css">
+
+    <!-- swiper.js -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <div class="wrap">
+        <aside class="side">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/common/logo.SVG" alt="logo">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <!-- 해당 페이지일 경우 current 클래스 추가 -->
+                        <a href="#" class="current">
+                            <i class="gnb__home__icon"></i>
+                            홈
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__project__icon"></i>
+                            프로젝트
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__metahuman__icon"></i>
+                            내 메타휴먼
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="profile">
+                    <div 
+                        class="profile__img"
+                        style="background-image: url(./images/profile/test-profile.png);"    
+                    ></div>
+                    <div class="profile__desc">
+                        <p class="name">길수영</p>
+                        <div class="cash">
+                            <i class="profile__cash__icon"></i>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="membership__upgrade__btn">
+                    <p>멤버십 업그레이드</p>
+                    <i class="membership__thunderbolt__icon"></i>
+                </button>
+            </div>
+        </aside>
+    
+        <main>
+            <header>
+                <div class="inner">
+                    <button class="project__add__btn">
+                        <i class="project__plus__icon"></i>
+                        <span>새 프로젝트 만들기</span>
+                    </button>
+                </div>
+            </header>
+            <section class="home">
+                <div class="inner">
+                    <div class="banner">
+                        <p>실존 인물의 외모와 목소리, 정체성을 그대로 재현한 것 같은 메타 휴먼, 직접 만들어보세요!</p>
+                        <button class="tutorial__btn">
+                            튜토리얼 보기
+                        </button>
+                    </div>
+                    <div class="slide__project">
+                        <h3>최근 배포한 프로젝트</h3>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="card">
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* main */
+.wrap main{
+    padding-left: 182px;
+}
+.studio__wrap main{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+/* main end */
+
+
+/* inner */
+header .inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.inner{
+    width: calc(100% - 100px);
+    height: 100%;
+    margin: 0 auto;
+}
+/* inner end */
+
+
+/* style */
+.flex{
+    display: flex;
+}
+.alignCenter{
+    align-items: center;
+}
+/* style end */
