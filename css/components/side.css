@@ -1,5 +1,17 @@
 .studio__wrap .side{
     width: 80px;
+    padding-bottom: 48px;
+}
+.studio__wrap .side .gnb + div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.studio__wrap .side .membership__upgrade__btn{
+    height: 50px;
+}
+.studio__wrap .side{
+    background-color: #333A43;
 }
 .side{
     position: fixed;
@@ -20,12 +32,16 @@
 }
 .studio__wrap .side .logo img{
     width: 35px;
+    width: 40px;
 }
 .wrap .side .logo img{
     width: 116px;
 }
 
 /* gnb */
+.studio__wrap .gnb{
+    width: max-content;
+}
 .gnb{
     /* margin-top: 90px; */
     position: absolute;
@@ -54,6 +70,9 @@
 }
 .studio__wrap .gnb a{
     opacity: 1;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
 }
 .gnb a:hover{
     opacity: 0.7;
@@ -76,6 +95,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    position: relative;
 }
 .profile .profile__img{
     width: 40px;
@@ -104,6 +124,89 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #fff;
+}
+.profile:hover .profile__desc__hov{
+    opacity: 1;
+    visibility: visible;
+}
+.profile__desc__hov{
+    position: absolute;
+    left: calc(100% + 40px);
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 22px 16px;
+    width: 205px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.profile__desc__hov h3{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 6px;
+}
+.profile__desc__hov p.email{
+    font-size: 13px;
+    font-weight: 400;
+    color: #363D59;
+    margin-bottom: 14px;
+}
+.profile__desc__hov .data{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #F7F7F8;
+    padding: 14px 12px;
+}
+.profile__desc__hov .data .flex{
+    justify-content: space-between;
+}
+.profile__desc__hov .data p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #1A2032;
+    margin-bottom: 4px;
+}
+.profile__desc__hov .data .data__num{
+    font-size: 12px;
+    font-weight: 500;
+    color: #9194A4;
+}
+.profile__desc__hov .data .cash{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.profile__desc__hov .data .cash span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #9194A4;
+}
+.profile__desc__hov .data a{
+    font-size: 12px;
+    font-weight: 400;
+    color: #7B61FF;
+}
+.profile__desc__hov .link__group{
+    border-top: 1px solid #e9e9e9;
+    margin-top: 20px;
+    padding-top: 22px;
+}
+.profile__desc__hov .link__group a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #1A2032;
+}
+.profile__desc__hov .link__group li{
+    margin-bottom: 15px;
+}
+.profile__desc__hov .link__group li:last-child{
+    margin-bottom: 0;
 }
 
 /* profile end */
@@ -144,25 +247,25 @@
     background-color: #F9F9F9;
     padding-top: 80px;
 }
-.style__tab ul{
+.style__tab > ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 34px;
 }
-.style__tab li{
+.style__tab > ul > li{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.style__tab li button{
+.style__tab > ul > li > button{
     width: 44px;
     position: relative;
 }
-.style__tab li button span{
+.style__tab > ul > li > button > span{
     text-align: center;
     margin-top: 6px;
     font-size: 12px;
@@ -171,15 +274,15 @@
     letter-spacing: -0.4px;
     transition: 0.3s ease;
 }
-.style__tab li button.active span{
-    color: #4396F5;
+.style__tab > ul > li > button.active > span{
+    color: #7B61FF;
 }
-.style__tab button i{
+.style__tab > ul > li > button > i{
     width: 100%;
     height: 44px;
     transition: 0.3s ease-in-out;
 }
-.style__tab button::after{
+.style__tab > ul > li > button::after{
     content: "";
     width: 44px;
     height: 44px;
@@ -195,8 +298,8 @@
 .style__tab button:hover::after{
     transform: scale(1);
 }
-.style__tab button.active::after{
-    background-color: #4396F5;
+.style__tab > ul > li > button.active::after{
+    background-color: #7B61FF;
     transform: scale(1);
 }
 /* studio side end */

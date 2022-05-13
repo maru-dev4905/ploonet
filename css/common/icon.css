@@ -6,27 +6,39 @@
 }
 
 .gnb__home__icon{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background-image: url("../../images/icons/side-gnb/ico-home-white.svg");
 }
 
 .gnb__project__icon{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background-image: url("../../images/icons/side-gnb/ico-project-white.svg");
 }
 
 .gnb__metahuman__icon{
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     background-image: url("../../images/icons/side-gnb/ico-metahuman-white.svg");
+}
+
+.gnb__file__icon{
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/icons/side-gnb/ico-file-white.svg");
 }
 
 .profile__cash__icon{
     width: 16px;
     height: 16px;
     background-image: url("../../images/icons/common/ico-coin-gold.svg");
+}
+
+.cash__gray__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-coin-gray.svg");
 }
 
 .membership__thunderbolt__icon{
@@ -48,7 +60,7 @@
     background-size: 28px 28px;
 }
 .style__tab button.active .style__metahuman__icon{
-    background-image: url("../../images/icons/studio-side/ico-metahuman-blue.svg");
+    background-image: url("../../images/icons/studio-side/ico-metahuman-purple.svg");
 }
 
 .style__background__icon{
@@ -58,7 +70,7 @@
     background-size: 28px 28px;
 }
 .style__tab button.active .style__background__icon{
-    background-image: url("../../images/icons/studio-side/ico-background-blue.svg");
+    background-image: url("../../images/icons/studio-side/ico-background-purple.svg");
 }
 
 .style__deco__icon{
@@ -68,7 +80,7 @@
     background-size: 28px 28px;
 }
 .style__tab button.active .style__deco__icon{
-    background-image: url("../../images/icons/studio-side/ico-deco-blue.svg");
+    background-image: url("../../images/icons/studio-side/ico-deco-purple.svg");
 }
 
 .style__text__icon{
@@ -78,7 +90,7 @@
     background-size: 28px 28px;
 }
 .style__tab button.active .style__text__icon{
-    background-image: url("../../images/icons/studio-side/ico-text-blue.svg");
+    background-image: url("../../images/icons/studio-side/ico-text-purple.svg");
 }
 
 .style__transition__icon{
@@ -88,7 +100,7 @@
     background-size: 28px 28px;
 }
 .style__tab button.active .style__transition__icon{
-    background-image: url("../../images/icons/studio-side/ico-transition-blue.svg");
+    background-image: url("../../images/icons/studio-side/ico-transition-purple.svg");
 }
 
 .studio__backArrow__icon{
@@ -175,6 +187,12 @@
     background-image: url("../../images/icons/studio-timeline/img-black.svg");
 }
 
+.timeline__video__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/studio-timeline/video-black.svg");
+}
+
 .timeline__soundEffect__icon{
     width: 14px;
     height: 14px;
@@ -208,4 +226,72 @@
 .close__gray__icon{
     background-image: url("../../images/icons/studio-side/ico-close-gray.svg");
     background-size: 9px 9px;
+}
+
+.select__black__icon{
+    background-image: url("../../images/icons/common/ico-select-black.svg");
+}
+
+.play__blue__icon{
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/icons/studio-side/ico-play-blue.svg");
+}
+
+.plus__blue__icon{
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/icons/studio-side/ico-plus-blue.svg");
+}
+
+.script__text__icon{
+    background-image: url("../../images/icons/studio-side/ico-scriptText-black.svg");
+    background-size: 18px 18px;
+}
+
+.script__motionPreset__icon{
+    background-image: url("../../images/icons/studio-side/ico-motionPreset-black.svg");
+    background-size: 18px 18px;
+}
+
+.profile__setting__icon{
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/common/ico-setting-black.svg");
+}
+
+.profile__guide__icon{
+    width: 17px;
+    height: 17px;
+    background-image: url("../../images/icons/common/ico-guide-black.svg");
+}
+
+.profile__logout__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-logout-black.svg");
+}
+
+.pages__white__icon{
+    width: 12px;
+    height: 12px;
+    background-image: url("../../images/icons/common/ico-pages-white.svg");
+}
+
+.copy__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-copy-black.svg");
+}
+.copy__btn:hover .copy__icon{
+    background-image: url("../../images/icons/common/ico-copy-white.svg");
+}
+
+.remove__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-remove-black.svg");
+}
+.remove__btn:hover .remove__icon{
+    background-image: url("../../images/icons/common/ico-remove-white.svg");
 }
