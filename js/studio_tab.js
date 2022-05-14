@@ -55,6 +55,21 @@ $(document).ready(function(){
         backgroundContent.eq(idx).addClass("show");
     })
 
+    // deco tab
+    var decoTab = $(".style__tab .deco .tab__list button");
+    var decoContent = $(".style__tab .deco .content > div");
+
+    decoTab.click(function(){
+        var th = $(this);
+        var idx = th.index();
+
+        decoTab.removeClass("active");
+        th.addClass("active");
+        
+        decoContent.removeClass("show");
+        decoContent.eq(idx).addClass("show");
+    })
+
     
     var contentTabBtn = $(".style__tab .content > div .button__list button");
     var backgroundImgContent = $(".style__tab .content > div .list");
@@ -77,7 +92,7 @@ $(document).ready(function(){
         
     });
 
-    // background tab -> img tab -> img button
+    // img tab -> img button
     var backgroundImg = $(".style__tab .img__list button"); 
 
     backgroundImg.click(function(){
@@ -89,7 +104,7 @@ $(document).ready(function(){
     });
 
 
-    // background tab -> img tab -> video button
+    // video tab -> video button
     var backgroundVideo = $(".style__tab .video__list button"); 
 
     backgroundVideo.click(function(){
@@ -98,5 +113,74 @@ $(document).ready(function(){
         th.closest("li").siblings($("li")).find("> button").removeClass("active");
 
         th.addClass("active");
+    });
+
+    // music tab -> music button
+    var backgroundMusic = $(".style__tab .music__list button:not(.play__btn)"); 
+    var backgroundMusicPlay = $(".style__tab .music__list button.play__btn"); 
+
+    backgroundMusic.click(function(){
+        var th = $(this);
+
+        th.closest("li").siblings($("li")).find("> button:not(.play__btn)").removeClass("active");
+
+        th.addClass("active");
+    });
+
+    backgroundMusicPlay.click(function(){
+        var th = $(this);
+
+        if(th.hasClass("active")){
+            th.removeClass("active");
+        }else{
+            th.closest("li").siblings($("li")).find("> button.play__btn").removeClass("active");
+            th.addClass("active");
+        }
+    });
+
+    // soundEffect tab -> soundEffect button
+    var soundEffect = $(".style__tab .soundEffect__list button:not(.play__btn)"); 
+    var soundEffectPlay = $(".style__tab .soundEffect__list button.play__btn"); 
+
+    soundEffect.click(function(){
+        var th = $(this);
+
+        th.closest("li").siblings($("li")).find("> button:not(.play__btn)").removeClass("active");
+
+        th.addClass("active");
+    });
+
+    soundEffectPlay.click(function(){
+        var th = $(this);
+
+        if(th.hasClass("active")){
+            th.removeClass("active");
+        }else{
+            th.closest("li").siblings($("li")).find("> button.play__btn").removeClass("active");
+            th.addClass("active");
+        }
+    });
+
+    // transition tab -> transition button
+    var transition = $(".style__tab .transition__list button:not(.play__btn)"); 
+    var transitionPlay = $(".style__tab .transition__list button.play__btn"); 
+
+    transition.click(function(){
+        var th = $(this);
+
+        th.closest("li").siblings($("li")).find("> button:not(.play__btn)").removeClass("active");
+
+        th.addClass("active");
+    });
+
+    transitionPlay.click(function(){
+        var th = $(this);
+
+        if(th.hasClass("active")){
+            th.removeClass("active");
+        }else{
+            th.closest("li").siblings($("li")).find("> button.play__btn").removeClass("active");
+            th.addClass("active");
+        }
     });
 });

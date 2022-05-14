@@ -1068,6 +1068,67 @@
 .style__tab .content > div .list li{
     width: calc(50% - 6px);
 }
+.style__tab .content > div .list.list_st2{
+    gap: 10px;
+    height: 380px;
+}
+.style__tab .content > div .list.list_st2 ul{
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.style__tab .content > div .list.list_st2 li{
+    width: 100%;
+    min-height: 50px;
+    position: relative;
+}
+.style__tab .content > div .list.list_st2 li button.play__btn{
+    width: max-content;
+    position: absolute;
+    left: auto;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 11px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #9194A4;
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+.style__tab .content > div .list.list_st2 li button.play__btn i{
+    transition: 0.3s ease;
+}
+.style__tab .content > div .list.list_st2 li button:not(.play__btn){
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    height: 100%;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1A2032;
+    padding-top: 2px;
+    transition: 0.3s ease;
+}
+.style__tab .content > div .list.list_st2 li .play__btn:hover + button{
+    border: 1px solid rgba(123, 97, 255, 0.05);
+    background-color: rgba(123, 97, 255, 0.05);
+
+}
+.style__tab .content > div .list.list_st2 li button:not(.play__btn):hover{
+    border: 1px solid rgba(123, 97, 255, 0.05);
+    background-color: rgba(123, 97, 255, 0.05);
+}
+.style__tab .content > div .list.list_st2 li button:not(.play__btn).active{
+    border: 1px solid #7B61FF;
+}
+
 .style__tab .content > div .list button{
     width: 100%;
     position: relative;

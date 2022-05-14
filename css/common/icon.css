@@ -303,3 +303,11 @@
 .card__remove__icon:hover{
     background-image: url("../../images/icons/common/ico-remove-white.svg");
 }
+.play__purple__icon{
+    width: 11px;
+    height: 12px;
+    background-image: url("../../images/icons/common/ico-play-purple.svg");   
+}
+.play__btn.active .play__purple__icon{
+    background-image: url("../../images/icons/common/ico-stop-purple.svg");   
+}
