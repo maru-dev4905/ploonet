@@ -55,25 +55,44 @@ $(document).ready(function(){
         backgroundContent.eq(idx).addClass("show");
     })
 
-    // background tab -> img tab
-    var backgroundImgTab = $(".style__tab .background .img__content .button__list button");
-    var backgroundImgContent = $(".style__tab .background .img__content .img__list");
+    
+    var contentTabBtn = $(".style__tab .content > div .button__list button");
+    var backgroundImgContent = $(".style__tab .content > div .list");
 
-    backgroundImgTab.click(function(){
+    contentTabBtn.click(function(){
         var th = $(this);
         var idx = th.index();
 
-        backgroundImgTab.removeClass("active");
+        // backgroundImgTab.removeClass("active");
+        th.siblings("button").removeClass("active");
         th.addClass("active");
 
-        backgroundImgContent.removeClass("show");
-        backgroundImgContent.eq(idx).addClass("show");
+        th.closest($(`
+            [class*=__content].show
+        `)).find(".list").removeClass("show");
+        
+        th.closest($(`
+            [class*=__content].show
+        `)).find(".list").eq(idx).addClass("show");
+        
     });
 
     // background tab -> img tab -> img button
     var backgroundImg = $(".style__tab .img__list button"); 
 
     backgroundImg.click(function(){
+        var th = $(this);
+
+        th.closest("li").siblings($("li")).find("> button").removeClass("active");
+
+        th.addClass("active");
+    });
+
+
+    // background tab -> img tab -> video button
+    var backgroundVideo = $(".style__tab .video__list button"); 
+
+    backgroundVideo.click(function(){
         var th = $(this);
 
         th.closest("li").siblings($("li")).find("> button").removeClass("active");

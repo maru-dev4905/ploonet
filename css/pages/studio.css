@@ -130,6 +130,14 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.page__list .list .add__box:hover::before{
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
 .page__list .list .add__box:hover .addPage__btn__list{
     opacity: 1;
     visibility: visible;
@@ -139,7 +147,7 @@
     visibility: hidden;
     position: absolute;
     left: 50%;
-    top: calc(100%);
+    top: calc(100% + 4px);
     transform: translateX(-50%);
     width: 100px;
     padding: 4px;
@@ -298,6 +306,8 @@
     width: 100%;
     height: 100vh;
     overflow: scroll;
+    display: grid;
+    grid-template-rows: 80px auto 50px 401.46px;
 }
 /* studio layout end */
 
@@ -395,29 +405,40 @@
 /* studio canvas */
 .studio__canvas{
     height: 554px;
+    height: 100%;
+    min-height: 554px;
     position: relative;
     width: 100%;
 }
 .studio__canvas > div{
-    background-color: #1A2032;
+    /* background-color: #1A2032; */
     z-index: 10;
-    margin: auto;
+    /* margin: auto; */
+    position: relative;
+    width: max-content;
+    height: 100%;
+    margin: 0 auto;
 }
-.studio__canvas .canvas1{
-    width: 974px;
-    height: 554px;
+.studio__canvas > div .content{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
-.studio__canvas .canvas2{
-    width: 554px;
-    height: 554px;
+.studio__canvas > div .canvas__size{
+    width: 100%;
+    height: max-content;
+    height: 100%;
+    margin: 0 auto;
+    /* position: absolute;
+    left: 50%;
+    transform: translateX(-50%); */
 }
-.studio__canvas .canvas3{
-    width: 312px;
-    height: 554px;
-}
-.studio__canvas .canvas4{
-    width: 738px;
-    height: 554px;
+.studio__canvas > div .canvas__size > img{
+    width: auto;
+    height: 100%;
 }
 /* studio canvas end */
 
@@ -473,6 +494,8 @@
     -webkit-appearance: none;
 }
 
+.studio__timeline{
+}
 .studio__timeline .time__box{
     width: 100%;
     height: 40px;
@@ -899,7 +922,7 @@
     padding: 0;
 }
 
-.style__tab .background .tab__list{
+.style__tab .tab__list{
     display: flex;
     width: 316px;
     margin-left: -22px;
@@ -907,7 +930,7 @@
     padding-bottom: 16px;
     margin-bottom: 20px;
 }
-.style__tab .background .tab__list button{
+.style__tab .tab__list button{
     font-size: 14px;
     font-weight: 400;
     color: #ACAFC0;
@@ -918,7 +941,7 @@
     position: relative;
     transition: 0.3s ease;
 }
-.style__tab .background .tab__list button:not(:last-child)::after{
+.style__tab .tab__list button:not(:last-child)::after{
     content: "";
     width: 1px;
     height: 10px;
@@ -934,17 +957,17 @@
     border-radius: 0;
     z-index: 1;
 }
-.style__tab .background .tab__list button.active{
+.style__tab .tab__list button.active{
     color: #7B61FF;
     font-weight: 700;
 }
-.style__tab .background .content > div{
+.style__tab .content > div{
     display: none;
 }
-.style__tab .background .content > div.show{
+.style__tab .content > div.show{
     display: block;
 }
-.style__tab .background .img__content .button__list{
+.style__tab .button__list{
     display: flex;
     width: 100%;
     border-radius: 10px;
@@ -952,7 +975,7 @@
     padding: 4px;
     margin-bottom: 20px;
 }
-.style__tab .background .img__content .button__list button{
+.style__tab .button__list button{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -964,40 +987,92 @@
     color: #ACAFC0;
     transition: 0.3s ease;
 }
-.style__tab .background .img__content .button__list button.active{
+.style__tab .button__list button.active{
     color: #1A2032;
     background-color: #fff;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
 }
-.style__tab .background .img__content .img__list{
+.style__tab .content > div .list{
     /* overflow: scroll; */
     height: 380px;
     display: none;
 }
-.style__tab .background .img__content .img__list.show{
+.style__tab .content > div .list.show{
     display: block;
 }
-.style__tab .background .img__content .img__list.default__img ul{
+.style__tab .content > div .list.default ul{
     height: 380px;
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
 }
-.style__tab .background .img__content .img__list.my__img ul{
+.style__tab .content > div .list.my ul{
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     height: 220px;
     overflow: scroll;
 }
-.style__tab .background .img__content .img__list li{
+.style__tab .content > div .list ul button .img__bg::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+.style__tab .content > div .list ul button:hover .img__bg::after{
+    background-color: rgba(123, 97, 255, 0.3);
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .content > div .list.my ul li{
+    position: relative;
+}
+.style__tab .content > div .list.my ul li:hover .remove__btn{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .content > div .list.my ul .remove__btn{
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.style__tab .content > div .list.my ul .remove__btn:hover{
+    background-color: #FF6060;
+}
+.style__tab .content > div .list.my ul .remove__btn:hover + button .img__bg::after{
+    background-color: rgba(123, 97, 255, 0.3);
+    opacity: 1;
+    visibility: visible;
+}
+
+.style__tab .content > div .list.my ul li:hover .btn__hov{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .content > div .list li{
     width: calc(50% - 6px);
 }
-.style__tab .background .img__content button{
+.style__tab .content > div .list button{
     width: 100%;
+    position: relative;
 }
-.style__tab .background .img__content button .img__bg{
+.style__tab .content > div button .img__bg{
     width: 100%;
     height: 90px;
     border-radius: 10px;
@@ -1007,7 +1082,7 @@
     display: block;
     position: relative;
 }
-.style__tab .background .img__content button .img__bg::before{
+.style__tab .content > div button .img__bg::before{
     content: "";
     width: 100%;
     height: 100%;
@@ -1023,12 +1098,12 @@
     transition: 0.3s ease;
 }
 
-.style__tab .background .img__content button.active .img__bg::before{
+.style__tab .content > div button.active .img__bg::before{
     opacity: 1;
     visibility: visible;
 }
 
-.style__tab .background .img__content button p{
+.style__tab .content > div button p{
     font-size: 12px;
     font-weight: 400;
     color: #999999;
@@ -1038,42 +1113,59 @@
     text-overflow: ellipsis;
     padding: 4px 5px;
 }
-.style__tab .background .file__upload__box{
+.style__tab .file__upload__box{
     width: 100%;
     height: 130px;
     border: 1px dashed #e9e9e9;
     border-radius: 10px;
     margin-bottom: 20px;
 }
-.style__tab .background .file__upload__box #file__upload{
+.style__tab .file__upload__box .file__upload{
     display: none;
 }
-.style__tab .background .file__upload__box #file__upload + label{
+.style__tab .file__upload__box .file__upload + label{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-.style__tab .background .file__upload__box #file__upload + label img{
+.style__tab .file__upload__box .file__upload + label img{
     width: 36px;
     margin-bottom: 8px;
 }
-.style__tab .background .file__upload__box #file__upload + label h3{
+.style__tab .file__upload__box .file__upload + label h3{
     font-size: 13px;
     font-weight: 500;
     color: #666;
     margin-bottom: 9px;
 }
-.style__tab .background .file__upload__box #file__upload + label p{
+.style__tab .file__upload__box .file__upload + label p{
     font-size: 12px;
     font-weight: 400;
     color: #adadad;
     line-height: 1.5;
     text-align: center;
 }
-.style__tab .background .file__upload__box #file__upload + label p span{
+.style__tab .file__upload__box .file__upload + label p span{
     color: #7B61FF;
+}
+
+.style__tab .video__time{
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+    position: absolute;
+    left: 6px;
+    bottom: 30px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.style__tab .content > div .list li:hover .video__time{
+    opacity: 1;
+    visibility: visible;
 }
 
 /* style__tab content end */

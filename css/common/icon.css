@@ -6,8 +6,8 @@
 }
 
 .gnb__home__icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-home-white.svg");
 }
 
@@ -18,14 +18,14 @@
 }
 
 .gnb__metahuman__icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-metahuman-white.svg");
 }
 
 .gnb__file__icon{
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-file-white.svg");
 }
 
@@ -293,5 +293,13 @@
     background-image: url("../../images/icons/common/ico-remove-black.svg");
 }
 .remove__btn:hover .remove__icon{
+    background-image: url("../../images/icons/common/ico-remove-white.svg");
+}
+
+.card__remove__icon{
+    background-size: 12px 12px;
+    background-image: url("../../images/icons/common/ico-remove-red.svg");
+}
+.card__remove__icon:hover{
     background-image: url("../../images/icons/common/ico-remove-white.svg");
 }
