@@ -30,4 +30,10 @@ header .inner{
 .alignCenter{
     align-items: center;
 }
+.justifyBetween{
+    justify-content: space-between;
+}
+.relative{
+    position: relative;
+}
 /* style end */

@@ -601,7 +601,7 @@
 
 
 /* style__tab */
-.style__tab li button + div{
+.style__tab > ul > li > button + div{
     position: absolute;
     top: 0;
     right: calc(100% + 20px);
@@ -615,7 +615,10 @@
     visibility: hidden;
     transition: 0.3s ease;
 }
-.style__tab li button.active + div{
+.style__tab > ul > li > button + div.text{
+    height: 510px;
+}
+.style__tab > ul > li > button.active + div{
     opacity: 1;
     visibility: visible;
 }
@@ -1227,6 +1230,275 @@
 .style__tab .content > div .list li:hover .video__time{
     opacity: 1;
     visibility: visible;
+}
+
+.style__tab .text__content .text__textarea{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 77px;
+    min-height: 77px;
+    max-height: 77px;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    padding: 7px 12px;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 400;
+    color: #1A2032;
+    line-height: 1.75;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+.style__tab .text__content .text__textarea:focus{
+    border: 1px solid #7B61FF;
+    background-color: #F9FAFC;
+}
+.style__tab .text__content .select__cont > span{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Spoqa Han Sans Neo";
+    color: #A3AAB8;
+}
+.style__tab .text__content .col{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F2F3F5;
+}
+.style__tab .text__content .col:last-child{
+    border-bottom: none;
+}
+.style__tab .font__style__cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.style__tab .font__style__cont input{
+    width: 50px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #FAFBFD;
+    box-shadow: inset 0px -1px 10px rgba(0, 0, 0, 0.03);
+    border: none;
+}
+.style__tab .font__style__cont > div{
+    align-items: center;
+}
+.style__tab .font__style__cont > div .font__style__kind{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.style__tab .font__style__cont > div span{
+    font-size: 12px;
+    font-weight: 400;
+    color: #ACAFC0;
+    padding-top: 1px;
+}
+.style__tab .font__style__cont > div input{
+    padding-left: 10px;
+    text-align: center;
+}
+.style__tab .color__basic{
+    padding-top: 28px;
+}
+.style__tab .color__basic .flex{
+    gap: 10px;
+    align-items: center;
+}
+.style__tab .color__basic span{
+    font-size: 12px;
+    font-weight: 500;
+    color: #A3AAB8;
+}
+.style__tab .color__basic p{
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #363D59;
+}
+.style__tab .color__basic .color__list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 22px;
+}
+.style__tab .color__basic .color__list button{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    position: relative;
+}
+.style__tab .color__basic .color__list button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 1px solid #e9e9e9;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.style__tab .color__basic .color__list button::after{
+    content: "";
+    width: 7.5px;
+    height: 7.5px;
+    background: url("../../images/icons/studio-side/ico-check-white.svg") no-repeat center / cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+.style__tab .color__basic .color__list button.active::before{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .color__basic .color__list button.active::after{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .font__style__list{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #FAFBFD;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0px -1px 10px rgba(0, 0, 0, 0.03);
+}
+.style__tab .font__style__list > button,
+.style__tab .font__style__list > div > button{
+    width: 45px;
+    height: 30px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style__tab .font__style__list > button::before,
+.style__tab .font__style__list > div > button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+.style__tab .font__style__list > button::after,
+.style__tab .font__style__list > div > button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #363D59;
+    opacity: 0.09;
+    filter: blur(4px);
+    border-radius: 8px;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.style__tab .font__style__list > button.active::before,
+.style__tab .font__style__list > div > button.active::before{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .font__style__list > button.active::after,
+.style__tab .font__style__list > div > button.active::after{
+    opacity: 0.09;
+}
+
+.style__tab .font__style__list > button img,
+.style__tab .font__style__list > div > button img{
+    position: relative;
+    z-index: 10;
+}
+.style__tab .text__line__box::before{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #353539;
+    position: absolute;
+    top: -3.5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.style__tab .text__line__box{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 4px);
+    transform: translateX(-50%);
+    width: 136px;
+    /* height: 87px; */
+    border-radius: 10px;
+    background-color: #353539;
+    padding: 12px 10px;
+}
+.style__tab .font__style__list .relative:hover .text__line__box{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .text__line__box button.active::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4px;
+    width: 1px;
+    height: 14px;
+    border-radius: 2px;
+    background-color: #9A88F7;
+}
+.style__tab .text__line__box button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+}
+.style__tab .text__line__box button:last-child{
+    margin-bottom: 0;
+}
+.style__tab .font__style__list button.color__picker__btn{
+    border-left: 1px solid #e9e9e9;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: 12px;
+}
+.style__tab .font__style__list button.color__picker__btn::after,
+.style__tab .font__style__list button.color__picker__btn::before{
+    display: none;
 }
 
 /* style__tab content end */

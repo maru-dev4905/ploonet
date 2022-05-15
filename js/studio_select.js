@@ -22,6 +22,11 @@ $(document).ready(function(){
 
         var th = $(this);
         var TH_siblings = th.parent().siblings($(".select__btn"));
+        var thSelect = th.closest($(".select"));
+        var thText = th.find("span").text();
+
+        console.log(thSelect);
+        console.log(thText);
 
         if(th.hasClass("active")){
             
@@ -30,6 +35,8 @@ $(document).ready(function(){
 
             TH_siblings.find(".select__btn").removeClass("active");
             th.addClass("active");
+
+            thSelect.find(".select__open span").text(thText);
         }
     });
     

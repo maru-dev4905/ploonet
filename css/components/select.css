@@ -5,6 +5,9 @@
     border-radius: 8px;
     position: relative;
 }
+.select.select_st2{
+    height: 36px;
+}
 .select .select__open.active{
     border: 1px solid #4396F5;
 }
@@ -19,6 +22,17 @@
     padding: 0 18px;
     transition: 0.3s ease;
 }
+.select.select_st2 .select__open{
+    border-radius: 0;
+    border: none;
+    padding: 0;
+}
+.select.select_st2.fontFamily__select .select__open{
+    min-width: 150px;
+}
+.select.select_st2.fontWeight__select .select__open{
+    min-width: 75px;
+}
 .select .select__open::after{
     display: none;
 }
@@ -31,10 +45,17 @@
     color: #1A2032;
     margin-top: 3px;
 }
+.select.select_st2 .select__open span{
+    font-size: 13px;
+}
 .select .select__open i{
     width: 16px;
     height: 12.08px;
     transition: 0.3s ease;
+}
+.select.select_st2 .select__open i{
+    width: 10px;
+    height: 10px;
 }
 .select .select__open.active i{
     transform: rotate(180deg);
@@ -62,10 +83,23 @@
     z-index: 100;
     background-color: #fff;
 }
+.select.select_st2 .select__list{
+    top: 40px;
+    width: max-content;
+    height: 150px;
+    padding: 6px 12px;
+    overflow-y: scroll;
+}
 .select .select__list li{
     position: relative;
 }
 .select .select__btn::after{
     display: none;
+}
+.select.select_st2 .select__btn{
+    width: 100%;
+    padding: 6px 0;
+    font-size: 12px;
+    text-align: left;
 }
 /* select end */

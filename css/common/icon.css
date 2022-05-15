@@ -232,6 +232,10 @@
     background-image: url("../../images/icons/common/ico-select-black.svg");
 }
 
+.select__purple__icon{
+    background-image: url("../../images/icons/common/ico-select-purple.svg");
+}
+
 .play__blue__icon{
     width: 24px;
     height: 24px;
