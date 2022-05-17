@@ -19,9 +19,9 @@ var addRule = (function (style) {
 
 
 // .chrome styling
-$( '.scale__box input' ).on( 'input', function( ) {
+$( '.fx__content .sound__range' ).on( 'input', function( ) {
     $( this ).css( 
         'background', 
-        'linear-gradient(to right, #B635F5 0%, #6DD1F0 '+this.value +'%, #E9E9E9 ' + this.value + '%, #E9E9E9 100%)' 
+        'linear-gradient(to right, #7B61FF 0%, #7B61FF '+this.value +'%, #E9E9E9 ' + this.value + '%, #E9E9E9 100%)' 
     );
 } );

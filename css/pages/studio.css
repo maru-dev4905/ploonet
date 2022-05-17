@@ -28,7 +28,7 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
-    font-size: 10px;
+    font-size: 11px;
     font-family: "Montserrat";
     font-weight: 500;
     color: #7B61FF;
@@ -66,6 +66,7 @@
     transform: translateX(-50%);
     background: url("../../images/icons/common/ico-transitionNot.svg") no-repeat center / cover;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.05));
+    cursor: pointer;
 }
 .page__list .list li.state__transition::after{
     content: "";
@@ -77,6 +78,7 @@
     bottom: -35px;
     transform: translateX(-50%);
     background: url("../../images/icons/common/ico-transition.svg") no-repeat center / cover;
+    cursor: pointer;
 }
 .page__list .list li:nth-last-child(2)::after{
     display: none;
@@ -87,6 +89,13 @@
     align-items: center;
     position: relative;
     height: 100%;
+    cursor: pointer;
+}
+.page__list .list li .card::before{
+    
+}
+.page__list .list li .card.active{
+    outline: 2px solid #7157F5;
 }
 .page__list .list .add__box{
     display: flex;
@@ -110,13 +119,13 @@
 .page__list .list .add__box span{
     opacity: 0;
     visibility: hidden;
-    transition: 0.1s ease;
+    /* transition: 0.1s ease; */
 }
 .page__list .list .add__box:hover{
     width: 100px;
 }
 .page__list .list .add__box:hover span{
-    transition: 0.3s 0.3s ease;
+    /* transition: 0.3s 0.3s ease; */
     opacity: 1;
     visibility: visible;
 }
@@ -305,9 +314,27 @@
 .studio__main{
     width: 100%;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
     display: grid;
     grid-template-rows: 80px auto 50px 401.46px;
+    grid-template-rows: 80px auto 50px 363px;
+}
+/* width */
+.studio__main::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+.studio__main::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+.studio__main::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    border-radius: 10px;
+}
+/* Handle on hover */
+.studio__main::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
 }
 /* studio layout end */
 
@@ -360,7 +387,14 @@
 }
 
 .studio__header .save__btn{
-    margin-right: 20px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+.studio__header .save__btn:hover{
+    background-color: #f2f3f5;
 }
 .studio__header .preview__btn{
     height: 38px;
@@ -370,6 +404,10 @@
     align-items: center;
     padding: 8px 12px;
     margin-right: 10px;
+    transition: 0.3s ease;
+}
+.studio__header .preview__btn:hover{
+    background-color: #f2f3f5;
 }
 .studio__header .preview__btn p{
     font-size: 13px;
@@ -398,6 +436,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease;
+}
+.studio__header .export__btn:hover{
+    background-color: #7157F5;
 }
 /* studio header end */
 
@@ -453,13 +495,31 @@
     align-items: center;
 }
 .studio__tool .col{
-    gap: 18px;
+    gap: 8px;
+}
+.studio__tool .col > button{
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    transition: 0.3s ease;
+}
+.studio__tool .col > button:hover{
+    background-color: #f2f3f5;
 }
 .studio__tool .scale__box{
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     /* margin-right: 16px; */
+}
+.studio__tool .scale__box button{
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+.studio__tool .scale__box button:hover{
+    background-color: #F2F3F5;
 }
 .studio__tool .scale__box .range{
     width: 90px;
@@ -477,7 +537,7 @@
 .studio__tool .scale__box input[type="range"] {
     background: linear-gradient(to right, #B635F5 0%, #6DD1F0 50%, #E9E9E9 50%, #E9E9E9 100%);
     border-radius: 8px;
-    height: 4px;
+    height: 2px;
     width: 90px;
     outline: none; 
     transition: background 450ms ease-in;
@@ -525,6 +585,7 @@
 }
 .studio__timeline .content__box .title__line{
     padding: 12px 16px;
+    padding: 0 16px;
     width: 136px;
     border-right: 1px solid #E9E9E9;
 }
@@ -533,7 +594,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 24px;
+    height: 40px;
+    /* margin-bottom: 24px; */
 }
 .studio__timeline .content__box .title__line li:last-child{
     margin-bottom: 0;
@@ -553,6 +615,7 @@
     left: 20px;
     width: 1px;
     height: 100%;
+    z-index: 1000000;
     background-color: #00F0FF;
 }
 .studio__timeline .content__box .content__line .marker::before{
@@ -594,6 +657,10 @@
     bottom: -20px;
     transform: translateX(-50%);
     font-style: normal;
+}
+
+.studio__timeline{
+    
 }
 
 /* studio timeline end */
@@ -1003,12 +1070,33 @@
 .style__tab .content > div .list.show{
     display: block;
 }
+.style__tab .content > div .list ul{
+    padding-right: 12px;
+    margin-right: -12px;
+}
 .style__tab .content > div .list.default ul{
     height: 380px;
-    overflow: scroll;
+    overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+}
+/* width */
+.style__tab .content > div .list ul::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+.style__tab .content > div .list ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+.style__tab .content > div .list ul::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    border-radius: 10px;
+}
+/* Handle on hover */
+.style__tab .content > div .list ul::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
 }
 .style__tab .content > div .list.my ul{
     display: flex;
@@ -1101,6 +1189,10 @@
     opacity: 1;
     visibility: visible;
     z-index: 100;
+}
+.style__tab .content > div .list.list_st2 li button.play__btn span{
+    font-family: "Montserrat";
+    font-weight: 400;
 }
 .style__tab .content > div .list.list_st2 li button.play__btn i{
     transition: 0.3s ease;
@@ -1490,15 +1582,505 @@
     margin-bottom: 0;
 }
 .style__tab .font__style__list button.color__picker__btn{
-    border-left: 1px solid #e9e9e9;
+    /* border-left: 1px solid #e9e9e9; */
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
     padding-left: 12px;
+    position: relative;
 }
-.style__tab .font__style__list button.color__picker__btn::after,
 .style__tab .font__style__list button.color__picker__btn::before{
+    content: "";
+    width: 1px;
+    height: 14px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+}
+.style__tab .font__style__list button.color__picker__btn::after{
     display: none;
 }
 
 /* style__tab content end */
+
+
+
+/* studio content box */
+.studio__main .content__line {
+    padding-top: 2px;
+}
+.studio__main .content__line li{
+    height: 40px;
+}
+.studio__main .content__line li > div[class*="__box"].active{
+    outline: 2px solid #7B61FF;
+}
+.studio__main .content__line li > div[class*="__box"] .left__size__btn{
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 2px;
+}
+.studio__main .content__line li > div[class*="__box"] .right__size__btn{
+
+}
+.studio__main .content__line .script__box{
+    height: 100%;
+    background-color: #F8F7FF;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 8px;
+    border-radius: 2px;
+    position: relative;
+}
+.studio__main .content__line .script__box.transition::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../../images/icons/common/ico-transition.svg") no-repeat center / cover;
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+.studio__main .content__line .script__box.notTransition::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("../../images/icons/common/ico-transitionNot.svg") no-repeat center / cover;
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+}
+
+.studio__main .content__line .script__box .metahuman__img{
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.studio__main .content__line .script__box .script__text{
+    font-size: 11px;
+    font-weight: 400;
+    color: #1A2032;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.studio__main .content__line .backgroundImg__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F6F7F9;
+    overflow: hidden;
+}
+.studio__main .content__line .backgroundImg__box .backgroundImg__img{
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.studio__main .content__line .backgroundVideo__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F6F7F9;
+}
+.studio__main .content__line .backgroundVideo__box i.timeline__backgroundVideo__icon{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+.studio__main .content__line .backgroundVideo__box .video__img{
+    width: max-content;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.studio__main .content__line .backgroundVideo__box .video__img .videoImg__img{
+    
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.studio__main .content__line .backgroundVideo__box .backgroundVideo__img{
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.studio__main .content__line .backgroundMusic__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F8F7FF;
+    padding: 0 10px;
+    gap: 8px;
+}
+.studio__main .content__line .backgroundMusic__box i{
+    min-width: 12px;
+    min-height: 12px;
+}
+
+.studio__main .content__line .backgroundMusic__name{
+    font-size: 11px;
+    font-weight: 400;
+    color: #1A2032;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.studio__main .content__line .text__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F8F7FF;
+    padding: 0 10px;
+    gap: 8px;
+}
+.studio__main .content__line .text__box i{
+    min-width: 15px;
+    min-height: 15px;
+}
+.studio__main .content__line .text__box .text__desc{
+    font-size: 11px;
+    font-weight: 400;
+    color: #1A2032;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.studio__main .content__line .soundEffect__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F8F7FF;
+    padding: 0 10px;
+    gap: 8px;
+}
+
+.studio__main .video__box{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F6F7F9;
+}
+.studio__main .video__box i.timeline__video__icon{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+.studio__main .video__box .video__img {
+    width: max-content;
+    height: 100%;
+    overflow: hidden;
+}
+.studio__main .video__box .video__img .videoImg__img{
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.studio__main .content__line img{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.studio__main .content__line .fx{
+    position: relative;
+}
+.studio__main .content__line .fx__box{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.studio__main .content__line .soundEffect__box i{
+    min-width: 12px;
+    min-height: 12px;
+}
+.studio__main .content__line .soundEffect__box .soundEffect__name{
+    font-size: 11px;
+    font-weight: 400;
+    color: #1A2032;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.studio__main .content__line .fx__box:hover .fx__content{
+    opacity: 1;
+    visibility: visible;
+}
+.studio__main .content__line .fx__box .fx__content{
+    position: absolute;
+    bottom: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 88px;
+    height: 75px;
+    border-radius: 5px;
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10000000000;
+}
+.studio__main .content__line .fx__box .fx__content:before{
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+.studio__main .content__line .fx__box .fx__content::after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.studio__main .content__line .fx__box .fx__content .col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.studio__main .content__line .fx__box .fx__content .col:last-child{
+    margin-bottom: 0;
+}
+.studio__main .fx__box .fx__content .col input[type="checkbox"]{
+    display: none;
+}
+.studio__main .fx__box .fx__content .col input[type="checkbox"] + label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.studio__main .fx__box .fx__content .col input[type="checkbox"] + label p{
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #363D59;
+}
+
+.studio__main .fx__box .fx__content .col input[type="checkbox"] + label .checkbox{
+    width: 10px;
+    height: 10.4px;
+    border-radius: 2px;
+    outline: 1px solid #363D59;
+    position: relative;
+}
+.studio__main .fx__box .fx__content .col input[type="checkbox"] + label .checkbox::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 6px;
+    height: 4px;
+    background: url("../../images/icons/common/ico-check-black.svg") no-repeat center / cover;
+    display: none;
+}
+.studio__main .fx__box .fx__content .col input[type="checkbox"]:checked + label .checkbox::before{
+    display: block;
+}
+
+.studio__main .fx__box .fx__content .col .sound__range{
+    width: 50px;
+}
+.studio__main .fx__box .fx__content .sound__range { 
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    height: 10px;
+    width: 90px;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+.studio__main .fx__box .fx__content .sound__range {
+    /* background: linear-gradient(to right, #B635F5 0%, #6DD1F0 50%, #E9E9E9 50%, #E9E9E9 100%); */
+    border-radius: 8px;
+    height: 2px;
+    width: 90px;
+    outline: none; 
+    background: linear-gradient(to right, #7B61FF 0%, #7B61FF 50%, #E9E9E9 50%, #E9E9E9 100%);
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+.studio__main .fx__box .fx__content .sound__range::-webkit-slider-thumb {
+    background-color: #fff;
+    border: solid 3px #7B61FF;
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+}
+.studio__main .fx .fx__box{
+    opacity: 0;
+    visibility: hidden;
+}
+.studio__main .fx:hover .fx__box{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.style__tab .textChoice__content > button:not(.script__auto__btn){
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    padding: 0 16px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+.style__tab .textChoice__content > button:not(.script__auto__btn) span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #ACAFC0;
+    font-family: "Montserrat";
+}
+.style__tab .textChoice__content > button:not(.script__auto__btn):hover{
+    background: rgba(123, 97, 255, 0.05);
+}
+.style__tab .textChoice__content > button:not(.script__auto__btn):hover h2{
+    color: #7B61FF;
+}
+
+.style__tab .textChoice__content > button.title__btn{
+    background-color: #F9F9F9;
+    transition: 0.3s ease;
+}
+.style__tab .textChoice__content > button.title__btn h2{
+    font-size: 25px;
+    font-weight: 600;
+    color: #1A2032;
+    transition: 0.3s ease;
+}
+
+.style__tab .textChoice__content > button.subTitle__btn{
+    background-color: #F9F9F9;
+    transition: 0.3s ease;
+}
+.style__tab .textChoice__content > button.subTitle__btn h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: #1A2032;
+    transition: 0.3s ease;
+}
+
+.style__tab .textChoice__content > button.text__btn{
+    background-color: #F9F9F9;
+    transition: 0.3s ease;
+}
+.style__tab .textChoice__content > button.text__btn h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1A2032;
+    transition: 0.3s ease;
+}
+.style__tab .textChoice__content > button:last-child{
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #7B61FF;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    font-size: 13px;
+    font-weight: 400;
+    padding-right: 16px;
+    color: #7B61FF;
+    transition: 0.3s ease;
+}
+.style__tab .textChoice__content > button:last-child:hover{
+    background-color: #f5f3ff;
+}
+
+.style__tab .textChoice__content > button:last-child span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
+
+.style__tab .textChoice__content > button:last-child .script__auto__info__text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 4px);
+    width: 178px;
+    padding: 18px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06);
+    font-size: 12px;
+    font-weight: 400;
+    color: #9194A4;
+    line-height: 1.75;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.24s ease;
+}
+.style__tab .textChoice__content > button:last-child .script__auto__info{
+    position: relative;
+}
+.style__tab .textChoice__content > button:last-child .script__auto__info:hover .script__auto__info__text{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* studio content box end */

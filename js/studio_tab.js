@@ -20,6 +20,9 @@ $(document).ready(function(){
         th.closest("li").find("> button").removeClass("active");
 
         th.closest("li").find(".select__open").removeClass("active");
+
+        textChoiceContent.addClass("show");
+        textContent.removeClass("show");
     });
 
 
@@ -183,4 +186,16 @@ $(document).ready(function(){
             th.addClass("active");
         }
     });
+
+
+    // text tab -> text button
+    var textBtn = $(".style__tab .textChoice__content > button:not(.script__auto__btn)");
+    var textChoiceContent = $(".style__tab .text .textChoice__content");
+    var textContent = $(".style__tab .text .text__content");
+
+    textBtn.click(function(){
+        textChoiceContent.removeClass("show");
+        textContent.addClass("show");
+    });
+
 });

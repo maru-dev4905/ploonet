@@ -116,51 +116,43 @@
 }
 
 .studio__save__icon{
-    width: 20px;
-    height: 20px;
     background-image: url("../../images/icons/common/ico-save-black.svg");
+    background-size: 20px 20px;
 }
 
 .timeline__prev__icon{
-    width: 18px;
-    height: 18px;
     background-image: url("../../images/icons/studio-timeline/prev-arrow-black.svg");
+    background-size: 18px 18px;
 }
 
 .timeline__next__icon{
-    width: 18px;
-    height: 18px;
     background-image: url("../../images/icons/studio-timeline/next-arrow-black.svg");
+    background-size: 18px 18px;
 }
 
 .timeline__cut__icon{
-    width: 20px;
-    height: 20px;
     background-image: url("../../images/icons/studio-timeline/cut-black.svg");
+    background-size: 20px 20px;
 }
 
 .timeline__trash__icon{
-    width: 20px;
-    height: 20px;
     background-image: url("../../images/icons/studio-timeline/trash-black.svg");
+    background-size: 20px 20px;
 }
 
 .timeline__copy__icon{
-    width: 20px;
-    height: 20px;
     background-image: url("../../images/icons/studio-timeline/copy-black.svg");
+    background-size: 20px 20px;
 }
 
 .timeline__zoomOut__icon{
-    width: 14px;
-    height: 14px;
     background-image: url("../../images/icons/studio-timeline/zoomOut-black.svg");
+    background-size: 14px 14px;
 }
 
 .timeline__zoomIn__icon{
-    width: 14px;
-    height: 14px;
     background-image: url("../../images/icons/studio-timeline/zoomIn-black.svg");
+    background-size: 14px 14px;
 }
 
 .timeline__fullScreen__icon{
@@ -314,4 +306,23 @@
 }
 .play__btn.active .play__purple__icon{
     background-image: url("../../images/icons/common/ico-stop-purple.svg");   
+}
+
+.info__purple__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-info-purple.svg");
+}
+
+.fx__icon{
+    min-width: 17.4px !important;
+    min-height: 18px !important;
+    background-image: url("../../images/icons/common/ico-fx.svg");
+    cursor: pointer;
+}
+
+.sound__black__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-sound-black.svg");
 }
