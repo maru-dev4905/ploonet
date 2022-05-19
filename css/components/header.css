@@ -1,17 +1,19 @@
 /* header */
 main header{
     height: 60px;
+    height: 90px;
     background-color: #f8f8f8;
+    background-color: #fff;
 }
 main header .project__add__btn{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #2D7BF0;
-    padding: 11px;
+    background-color: #44505F;
+    padding: 11px 17px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-
     font-size: 13px;
     font-family: 'Spoqa Han Sans Neo';
     font-weight: 500;

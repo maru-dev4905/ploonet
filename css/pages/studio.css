@@ -313,7 +313,9 @@
 /* studio layout */
 .studio__main{
     width: 100%;
+    width: calc(100vw - 80px - 216px - 80px);
     height: 100vh;
+    overflow-x: hidden;
     overflow-y: scroll;
     display: grid;
     grid-template-rows: 80px auto 50px 401.46px;
@@ -348,6 +350,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    width: calc(100vw - 80px - 216px - 80px);
 }
 .studio__header .title{
     display: flex;
@@ -451,6 +454,8 @@
     min-height: 554px;
     position: relative;
     width: 100%;
+    
+    width: calc(100vw - 80px - 216px - 80px);
 }
 .studio__canvas > div{
     /* background-color: #1A2032; */
@@ -594,7 +599,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    height: 40px;
+    height: 42px;
     /* margin-bottom: 24px; */
 }
 .studio__timeline .content__box .title__line li:last-child{
@@ -608,6 +613,8 @@
 .studio__timeline .content__box .content__line{
     width: calc(100% - 136px);
     position: relative;
+    /* overflow-x: scroll; */
+    /* width: calc(100vw - 80px - 216px - 80px - 136px); */
 }
 .studio__timeline .content__box .content__line .marker{
     position: absolute;
@@ -627,6 +634,36 @@
     width: 8px;
     height: 11px;
     background: url("../../images/icons/studio-timeline/marker-skyBlue.svg") no-repeat center / cover;
+    cursor: pointer;
+}
+.studio__timeline .content__box .content__line .marker .marker__time{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #00F0FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.studio__timeline .content__box .content__line .marker:hover .marker__time{
+    opacity: 1;
+    visibility: visible;
 }
 
 .studio__timeline .time__box .time__progress{
@@ -669,9 +706,11 @@
 
 /* style__tab */
 .style__tab > ul > li > button + div{
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: calc(100% + 20px);
+    top: 40px;
+    /* right: calc(100% + 20px); */
+    right: 100px;
     width: 316px;
     height: 578px;
     border-radius: 20px;
@@ -1074,12 +1113,19 @@
     padding-right: 12px;
     margin-right: -12px;
 }
+.style__tab .content > div .list.my {
+    padding-right: 12px;
+    margin-right: -12px;
+}
 .style__tab .content > div .list.default ul{
     height: 380px;
     overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+}
+.style__tab .content > div .list.default.transition__list ul{
+    height: 500px;
 }
 /* width */
 .style__tab .content > div .list ul::-webkit-scrollbar {
@@ -1098,12 +1144,31 @@
 .style__tab .content > div .list ul::-webkit-scrollbar-thumb:hover {
     background: #e0e0e0;
 }
+
+/* width */
+.style__tab .content > div .list.my::-webkit-scrollbar {
+    width: 5px;
+}
+.style__tab .content > div .list.my::-webkit-scrollbar-track {
+    background: transparent;
+}
+/* Handle */
+.style__tab .content > div .list.my::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    border-radius: 10px;
+}
+/* Handle on hover */
+.style__tab .content > div .list.my::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
+}
+.style__tab .content > div .list.my{
+    overflow-y: scroll;
+}
 .style__tab .content > div .list.my ul{
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     height: 220px;
-    overflow: scroll;
 }
 .style__tab .content > div .list ul button .img__bg::after{
     content: "";
@@ -1193,6 +1258,7 @@
 .style__tab .content > div .list.list_st2 li button.play__btn span{
     font-family: "Montserrat";
     font-weight: 400;
+    transition: 0.3s ease;
 }
 .style__tab .content > div .list.list_st2 li button.play__btn i{
     transition: 0.3s ease;
@@ -1211,9 +1277,12 @@
     padding-top: 2px;
     transition: 0.3s ease;
 }
-.style__tab .content > div .list.list_st2 li .play__btn:hover + button{
+.style__tab .content > div .list.list_st2 li:hover button:not(.play__btn){
     border: 1px solid rgba(123, 97, 255, 0.05);
     background-color: rgba(123, 97, 255, 0.05);
+}
+
+.style__tab .content > div .list.list_st2 li .play__btn:hover + button{
 
 }
 .style__tab .content > div .list.list_st2 li button:not(.play__btn):hover{
@@ -1227,6 +1296,34 @@
 .style__tab .content > div .list button{
     width: 100%;
     position: relative;
+}
+.style__tab .content > div .list.list_st2 li button.remove__btn{
+    position: absolute;
+    left: auto;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    padding: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important;
+    border: none !important;
+}
+.style__tab .content > div .list.list_st2 li:hover button.remove__btn{
+    opacity: 1;
+    visibility: visible;
+}
+.style__tab .content > div .list.list_st2 li button.remove__btn.active{
+    border: none;
+}
+.style__tab .content > div .list.list_st2.my li:hover button.play__btn span{
+    opacity: 0;
+    visibility: hidden;
 }
 .style__tab .content > div button .img__bg{
     width: 100%;
@@ -1322,6 +1419,13 @@
 .style__tab .content > div .list li:hover .video__time{
     opacity: 1;
     visibility: visible;
+}
+.style__tab .content > div.transition__content ul li p{
+    text-align: left;
+    font-size: 13px;
+    color: #1A2032;
+}
+.style__tab > ul > li > button + div.transition{
 }
 
 .style__tab .text__content .text__textarea{
@@ -1611,12 +1715,26 @@
 /* studio content box */
 .studio__main .content__line {
     padding-top: 2px;
+    width: 100%;
+    padding-right: 10px;
 }
 .studio__main .content__line li{
     height: 40px;
+    margin-bottom: 2px;
+    padding-left: 2px;
+    display: flex;
 }
+.studio__main .content__line li > div[class*="__box"]{
+    position: relative;
+    margin-right: 2px;
+}
+.studio__main .content__line li > div[class*="__box"]:hover,
 .studio__main .content__line li > div[class*="__box"].active{
     outline: 2px solid #7B61FF;
+}
+.studio__main .content__line li > div[class*="__box"].active .left__size__btn,
+.studio__main .content__line li > div[class*="__box"].active .right__size__btn{
+    display: flex;
 }
 .studio__main .content__line li > div[class*="__box"] .left__size__btn{
     position: absolute;
@@ -1625,10 +1743,45 @@
     transform: translateY(-50%);
     display: flex;
     gap: 2px;
+    z-index: 10;
+    width: 4px;
+    height: 10px;
+    display: none;
 }
 .studio__main .content__line li > div[class*="__box"] .right__size__btn{
-
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 2px;
+    z-index: 10;
+    width: 4px;
+    height: 10px;
+    display: none;
 }
+.studio__main .content__line li > div[class*="__box"] .right__size__btn span,
+.studio__main .content__line li > div[class*="__box"] .left__size__btn span{
+    border-radius: 2px;
+    width: 1px;
+    height: 100%;
+    background-color: #7B61FF;
+}
+.studio__main .content__line li > div[class*="__box"] .timeline__fadeOut__icon{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(1);
+    z-index: 0;
+}
+.studio__main .content__line li > div[class*="__box"] .timeline__fadeIn__icon{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    z-index: 0;
+}
+
 .studio__main .content__line .script__box{
     height: 100%;
     background-color: #F8F7FF;
@@ -1650,6 +1803,7 @@
     top: 50%;
     z-index: 100;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 .studio__main .content__line .script__box.notTransition::after{
     content: "";
@@ -1663,6 +1817,7 @@
     z-index: 100;
     transform: translateY(-50%);
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.1));
+    cursor: pointer;
 }
 
 .studio__main .content__line .script__box .metahuman__img{
@@ -1689,7 +1844,18 @@
     border-radius: 4px;
     background-color: #F6F7F9;
     overflow: hidden;
+    position: relative;
 }
+.studio__main .content__line .backgroundImg__box:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .studio__main .content__line .backgroundImg__box .backgroundImg__img{
     width: auto;
     height: 100%;
@@ -1704,7 +1870,18 @@
     align-items: center;
     border-radius: 4px;
     background-color: #F6F7F9;
+    position: relative;
 }
+.studio__main .content__line .backgroundVideo__box:hover:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .studio__main .content__line .backgroundVideo__box i.timeline__backgroundVideo__icon{
     position: absolute;
     left: 10px;
@@ -1793,7 +1970,19 @@
     align-items: center;
     border-radius: 4px;
     background-color: #F6F7F9;
+    position: relative;
 }
+.studio__main .video__box:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
 .studio__main .video__box i.timeline__video__icon{
     position: absolute;
     top: 50%;
@@ -1813,6 +2002,37 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
+.studio__main .img__box{
+    height: 40px;
+    background-color: #F8F7FF;
+    border-radius: 4px;
+    padding: 7px 0;
+    position: relative;
+}
+.studio__main .img__box:hover::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.studio__main .img__box .deco__img__group{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.studio__main .img__box .deco__img__group img{
+    height: 100%;
+    width: auto;
+}
+
 .studio__main .content__line img{
     user-drag: none;
     -webkit-user-drag: none;
@@ -1846,6 +2066,7 @@
 }
 .studio__main .content__line .fx__box:hover .fx__content{
     opacity: 1;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.12);
     visibility: visible;
 }
 .studio__main .content__line .fx__box .fx__content{
@@ -1963,14 +2184,36 @@
     border-radius: 50%;
     -webkit-appearance: none;
 }
-.studio__main .fx .fx__box{
+.studio__main .fx__box{
     opacity: 0;
     visibility: hidden;
 }
-.studio__main .fx:hover .fx__box{
+.studio__main .fx .fx__box{
     opacity: 1;
     visibility: visible;
+    position: absolute;
+    background-color: #fff;
 }
+.studio__main .fx .fx__box .fx__icon{
+    position: relative;
+    z-index: 10;
+}
+.studio__main .fx .fx__box:hover .fx__icon{
+    background-image: url("../../images/icons/common/ico-fx-active.svg");
+}
+.studio__main .fx .fx__box::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(173, 173, 173, 0.2);
+    filter: blur(4px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 
 
 .style__tab .textChoice__content > button:not(.script__auto__btn){

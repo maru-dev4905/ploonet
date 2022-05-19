@@ -36,4 +36,7 @@ header .inner{
 .relative{
     position: relative;
 }
+.textAlign__center{
+    text-align: center;
+}
 /* style end */

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploonet</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common/font.css">
+    <link rel="stylesheet" href="./css/common/reset.css">
+    <link rel="stylesheet" href="./css/common/icon.css">
+    <link rel="stylesheet" href="./css/common/layout.css">
+
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/side.css">
+    <link rel="stylesheet" href="./css/components/card.css">
+
+    <link rel="stylesheet" href="./css/pages/mypage.css">
+
+    <!-- swiper.js -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <div class="wrap">
+        <aside class="side">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/common/logo.svg" alt="logo">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <!-- 해당 페이지일 경우 current 클래스 추가 -->
+                        <a href="./mypage_home.html" class="current">
+                            <i class="gnb__home__icon"></i>
+                            홈
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mypage_project.html">
+                            <i class="gnb__project__icon"></i>
+                            프로젝트
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mypage_metahuman.html">
+                            <i class="gnb__metahuman__icon"></i>
+                            내 메타휴먼
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__file__icon"></i>
+                            내 미디어
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="profile">
+                    <div 
+                        class="profile__img"
+                        style="background-image: url(./images/profile/test-profile.png);"    
+                    ></div>
+                    <div class="profile__desc">
+                        <p class="name">길수영</p>
+                        <div class="cash">
+                            <i class="profile__cash__icon"></i>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="membership__upgrade__btn">
+                    <p>멤버십 업그레이드</p>
+                    <i class="membership__thunderbolt__icon"></i>
+                </button>
+            </div>
+        </aside>
+    
+        <main>
+            <header>
+                <div class="inner">
+                    <button class="project__add__btn">
+                        <i class="project__plus__icon"></i>
+                        <span>새 프로젝트 만들기</span>
+                    </button>
+                </div>
+            </header>
+            <section class="home">
+                <div class="inner">
+                    <div class="banner">
+                        <p>실존 인물의 외모와 목소리, 정체성을 그대로 재현한 것 같은 메타 휴먼, 직접 만들어보세요!</p>
+                        <button class="tutorial__btn">
+                            튜토리얼 보기
+                        </button>
+                    </div>
+                    <div class="slide__project">
+                        <h3>최근 배포한 프로젝트</h3>
+                        <!-- <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="card">
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="flex list">
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>재생시간</span>
+                                                <span>00:14:35</span>
+                                            </div>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="install__btn">
+                                                    <i class="install__black__icon"></i>
+                                                    <span>다운받기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#">
+                                    <div class="img__bg" style="background-image:url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>무제</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="edit__project">
+                        <h3>최근 편집중인 프로젝트</h3>
+                        <div class="flex list">
+                            <div class="card">
+                                <button class="add__btn">
+                                    <div class="add__btn__plus">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span>새 프로젝트 만들기</span>
+                                </button>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card">
+                                <div class="hov">
+                                    <div class="etc__box">
+                                        <span class="etc__icon">
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                        <div class="content">
+                                            <h4>
+                                                상세정보
+                                                <i class="info__black__icon"></i>
+                                            </h4>
+                                            <div class="col">
+                                                <span>페이지 수</span>
+                                                <span>7</span>
+                                            </div>
+                                            <div class="btn__group">
+                                                <button class="edit__btn">
+                                                    <i class="edit__black__icon"></i>
+                                                    <span>편집하기</span>
+                                                </button>
+                                                <button class="copy__btn">
+                                                    <i class="copy__black__icon"></i>
+                                                    <span>복사하기</span>
+                                                </button>
+                                                <button class="remove__btn">
+                                                    <i class="remove__black__icon"></i>
+                                                    <span>삭제하기</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a>
+                                    <div class="img__bg" style="background-image: url(./images/card/01.png);"></div>
+                                    <div class="card__text">
+                                        <p>플루넷 소개 영상</p>
+                                        <span>2022.04.05</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+</html>

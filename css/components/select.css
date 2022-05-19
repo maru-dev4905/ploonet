@@ -100,9 +100,10 @@
 .select.select_st2 .select__btn{
     width: 100%;
     padding: 6px 4px;
+    padding: 10px 8px;
     font-size: 12px;
     text-align: left;
-    border-radius: 8px;
+    border-radius: 2px;
     transition: 0.3s ease;
 }
 .select.select_st2 .select__btn:hover{

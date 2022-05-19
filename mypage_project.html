@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploonet</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/common/font.css">
+    <link rel="stylesheet" href="./css/common/reset.css">
+    <link rel="stylesheet" href="./css/common/icon.css">
+    <link rel="stylesheet" href="./css/common/layout.css">
+
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/select.css">
+    <link rel="stylesheet" href="./css/components/side.css">
+
+    <link rel="stylesheet" href="./css/pages/mypage.css">
+
+    <!-- swiper.js -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    
+    <div class="wrap">
+        <aside class="side">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/common/logo.svg" alt="logo">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <!-- 해당 페이지일 경우 current 클래스 추가 -->
+                        <a href="./mypage_home.html" class="">
+                            <i class="gnb__home__icon"></i>
+                            홈
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mypage_project.html" class="current">
+                            <i class="gnb__project__icon"></i>
+                            프로젝트
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./mypage_metahuman.html">
+                            <i class="gnb__metahuman__icon"></i>
+                            내 메타휴먼
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="gnb__file__icon"></i>
+                            내 미디어
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <div class="profile">
+                    <div 
+                        class="profile__img"
+                        style="background-image: url(./images/profile/test-profile.png);"    
+                    ></div>
+                    <div class="profile__desc">
+                        <p class="name">길수영</p>
+                        <div class="cash">
+                            <i class="profile__cash__icon"></i>
+                            <span class="number">0</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="membership__upgrade__btn">
+                    <p>멤버십 업그레이드</p>
+                    <i class="membership__thunderbolt__icon"></i>
+                </button>
+            </div>
+        </aside>
+    
+        <main>
+            <header>
+                <div class="inner">
+                    <button class="project__add__btn">
+                        <i class="project__plus__icon"></i>
+                        <span>새 프로젝트 만들기</span>
+                    </button>
+                </div>
+            </header>
+            <section class="project">
+                <div class="inner">
+                    <div class="project__list">
+                        <h2>프로젝트</h2>
+                        <div class="filter">
+                            <button class="alignment__btn">
+                                <span>최근 작업순</span>
+                                <i class="alignment__icon"></i>
+                            </button>
+                            <div class="select select_st2 project__select">
+                                <button class="select__open">
+                                    <span class="default">전체 프로젝트</span>
+                                    <i class="select__black__icon"></i>
+                                </button>
+                                <ul class="select__list">
+                                    <li>
+                                        <button class="select__btn">
+                                            <span>전체 프로젝트</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="select__btn">
+                                            <span>편집중인 프로젝트</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="select__btn">
+                                            <span>완료된 프로젝트</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="list__title">
+                                <span>제목</span>
+                                <span class="textAlign__center">미리보기 횟수</span>
+                                <span class="textAlign__center">페이지 수</span>
+                                <span class="textAlign__center">재생시간</span>
+                                <span>상태</span>
+                                <span></span>
+                            </div>
+                            <ul>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/02.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제무제</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>00:10:25</span>
+                                    </div>
+                                    <div class="state ing">
+                                        <span>편집중</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/03.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>Blue crab hands up and smile</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>1/5</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="state ing">
+                                        <span>편집중</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/02.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>무제</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>00:10:25</span>
+                                    </div>
+                                    <div class="state clear">
+                                        <span>완료</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/03.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>Blue crab hands up and smile</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>1/5</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="state ing">
+                                        <span>편집중</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/02.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>무제</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>00:10:25</span>
+                                    </div>
+                                    <div class="state clear">
+                                        <span>완료</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/03.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>Blue crab hands up and smile</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>1/5</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="state ing">
+                                        <span>편집중</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/02.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>무제</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>00:10:25</span>
+                                    </div>
+                                    <div class="state clear">
+                                        <span>완료</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/03.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>Blue crab hands up and smile</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>1/5</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="state ing">
+                                        <span>편집중</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list__item">
+                                    <div class="title">
+                                        <div class="img__bg">
+                                            <div class="img" style="background-image: url(./images/card/02.png);"></div>
+                                            <div class="img__bg__deco"></div>
+                                        </div>
+                                        <div class="title__content">
+                                            <h3>무제</h3>
+                                            <P>
+                                                <span>마지막 편집일시</span>
+                                                <span class="date">2022.04.06</span>
+                                            </P>
+                                        </div>
+                                    </div>
+                                    <div class="prevw__cnt textAlign__center">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="pg__num textAlign__center">
+                                        <span>7</span>
+                                    </div>
+                                    <div class="play__time textAlign__center">
+                                        <span>00:10:25</span>
+                                    </div>
+                                    <div class="state clear">
+                                        <span>완료</span>
+                                    </div>
+                                    <div class="other">
+                                        <span>
+                                            <i class="etc__gray__icon"></i>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <script src="./js/select.js"></script>
+    <script src="./js/btn.js"></script>
+</body>
+</html>

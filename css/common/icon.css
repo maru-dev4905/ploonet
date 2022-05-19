@@ -5,25 +5,45 @@
     display: block;
 }
 
-.gnb__home__icon{
+.wrap .gnb__home__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-home-black.svg");
+}
+.studio__wrap .gnb__home__icon{
     width: 22px;
     height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-home-white.svg");
 }
 
-.gnb__project__icon{
+.wrap .gnb__project__icon{
+    width: 24px;
+    height: 24px;
+    background-image: url("../../images/icons/side-gnb/ico-project-black.svg");
+}
+.studio__wrap .gnb__project__icon{
     width: 24px;
     height: 24px;
     background-image: url("../../images/icons/side-gnb/ico-project-white.svg");
 }
 
-.gnb__metahuman__icon{
+.wrap .gnb__metahuman__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-metahuman-black.svg");
+}
+.studio__wrap .gnb__metahuman__icon{
     width: 22px;
     height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-metahuman-white.svg");
 }
 
-.gnb__file__icon{
+.wrap .gnb__file__icon{
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/icons/side-gnb/ico-file-black.svg");
+}
+.studio__wrap .gnb__file__icon{
     width: 22px;
     height: 22px;
     background-image: url("../../images/icons/side-gnb/ico-file-white.svg");
@@ -41,7 +61,12 @@
     background-image: url("../../images/icons/common/ico-coin-gray.svg");
 }
 
-.membership__thunderbolt__icon{
+.wrap .membership__thunderbolt__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-thunderbolt-black.svg");
+}
+.studio__wrap .membership__thunderbolt__icon{
     width: 14px;
     height: 14px;
     background-image: url("../../images/icons/common/ico-thunderbolt-white.svg");
@@ -299,6 +324,13 @@
 .card__remove__icon:hover{
     background-image: url("../../images/icons/common/ico-remove-white.svg");
 }
+
+.remove__gray__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-remove-gray.svg");
+}
+
 .play__purple__icon{
     width: 11px;
     height: 12px;
@@ -313,10 +345,15 @@
     height: 14px;
     background-image: url("../../images/icons/common/ico-info-purple.svg");
 }
+.info__black__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-info-black.svg");
+}
 
 .fx__icon{
-    min-width: 17.4px !important;
-    min-height: 18px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
     background-image: url("../../images/icons/common/ico-fx.svg");
     cursor: pointer;
 }
@@ -325,4 +362,67 @@
     width: 14px;
     height: 14px;
     background-image: url("../../images/icons/common/ico-sound-black.svg");
+}
+
+.timeline__fadeOut__icon{
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/studio-timeline/ico-fade-black.svg");
+}
+
+.timeline__fadeIn__icon{
+    width: 18px;
+    height: 18px;
+    background-image: url("../../images/icons/studio-timeline/ico-fade-black.svg");
+}
+
+.alignment__icon{
+    min-width: 12px;
+    min-height: 10px;
+    background-image: url("../../images/icons/common/ico-alignment.svg");
+}
+.alignment__btn.active .alignment__icon{
+    background-image: url("../../images/icons/common/ico-alignment2.svg");
+}
+
+.etc__gray__icon{
+    width: 2px;
+    height: 10px;
+    background-image: url("../../images/icons/common/ico-etc-gray.svg");
+}
+
+.arrow__black__icon{
+    width: 14px;
+    height: 14px;
+    background-image: url("../../images/icons/common/ico-arrow-black.svg");
+}
+
+.preview__white__icon{
+    width: 30px;
+    height: 30px;
+    background-image: url("../../images/icons/common/ico-preview-btn.svg");
+}
+
+.install__black__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-install-black.svg");
+}
+
+.copy__black__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-copy-black.svg");
+}
+
+.remove__black__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-remove-black.svg");
+}
+
+.edit__black__icon{
+    width: 16px;
+    height: 16px;
+    background-image: url("../../images/icons/common/ico-edit-black.svg");
 }
